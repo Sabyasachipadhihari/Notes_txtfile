@@ -1,0 +1,92 @@
+Hibernate Framework:
+
+Hibernate is a Java framework that simplifies the development of Java application to
+ interact with the database. It is an open source, lightweight, ORM (Object Relational Mapping) tool.
+ Hibernate implements the specifications of JPA (Java Persistence API) for data persistence.
+
+
+ORM Tool:
+
+An ORM tool simplifies the data creation, data manipulation and data access.
+ It is a programming technique that maps the object to the data stored in the database.
+
+What is JPA?
+Java Persistence API (JPA) is a Java specification that provides certain functionality and standard 
+to ORM tools. The javax.persistence package contains the JPA classes and interfaces.
+
+
+
+Advantages of Hibernate Framework:
+
+Following are the advantages of hibernate framework:
+
+1) Open Source and Lightweight
+Hibernate framework is open source under the LGPL license and lightweight.
+
+2) Fast Performance
+The performance of hibernate framework is fast because cache is internally used in hibernate framework.
+ There are two types of cache in hibernate framework first level cache and second level cache.
+ First level cache is enabled by default.
+
+3) Database Independent Query
+HQL (Hibernate Query Language) is the object-oriented version of SQL. It generates the database 
+independent queries. So you don't need to write database specific queries. Before Hibernate, if 
+database is changed for the project, we need to change the SQL query as well that leads to the 
+maintenance problem.
+
+4) Automatic Table Creation
+Hibernate framework provides the facility to create the tables of the database automatically. 
+So there is no need to create tables in the database manually.
+
+5) Simplifies Complex Join
+Fetching data from multiple tables is easy in hibernate framework.
+
+6) Provides Query Statistics and Database Status
+Hibernate supports Query cache and provide statistics about query and database status.
+
+
+Annotations:
+
+@Entity
+Annotate all your entity beans with @Entity.
+
+@Table
+Specify the database table this Entity maps to using the name attribute of @Table annotation.
+ 
+@Column
+Specify the column mapping using @Column annotation.
+
+@Id
+Annotate the id column using @Id.
+
+@GeneratedValue
+Let database generate (auto-increment) the id column.
+
+@Version
+Control versioning or concurrency using @Version annotation.
+
+@OrderBy
+Sort your data using @OrderBy annotation. In example below, it will sort all contacts in a company
+by their firstname in ascending order.
+  @OrderBy("firstName asc")
+  private Set contacts;
+
+@Transient
+Annotate your transient properties with @Transient.
+
+@Lob
+Annotate large objects with @Lob.
+
+
+Mapping :
+
+hibernate mappings are one of the key features of hibernate . they establish the relationship 
+between two database tables as attributes in your model. that allows you to easily navigate the
+ associations in your model and criteria queries.
+
+
+the relationship that can be established between entities are-
+
+one to one — it represents the one to one relationship between two tables.
+one to many/many to one — it represents the one to many relationship between two tables.
+many to many — it represents the many to many relationship between two tables.
